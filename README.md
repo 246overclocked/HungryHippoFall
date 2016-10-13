@@ -1,5 +1,5 @@
 # Hungry Hippo Fall
-[![Build Status](https://travis-ci.com/246overclocked/hungryhippofall.svg?token=thBQUnyouNyEykbcSsVn&branch=master)](https://travis-ci.com/246overclocked/hungryhippofall)
+[![Build Status](https://travis-ci.com/246overclocked/HungryHippoFall.svg?token=thBQUnyouNyEykbcSsVn&branch=master)](https://travis-ci.com/246overclocked/HungryHippoFall)
 [![Stories in Ready](https://badge.waffle.io/246overclocked/hungryhippofall.svg?label=ready&title=Ready)](https://waffle.io/246overclocked/hungryhippofall)
 
 Overclocked's Demo code for our 2016 competition robot!
