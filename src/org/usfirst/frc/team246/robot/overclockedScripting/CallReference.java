@@ -8,10 +8,10 @@ import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
 public class CallReference {
 
 	//contains all registered methods
-	private static HashMap<String, MethodHolder> methods = new HashMap<>();
+	public static HashMap<String, MethodHolder> methods = new HashMap<>();
 	
 	//contains all registered motors
-	private static HashMap<String, CANTalon246> motors = new HashMap<>();	
+	public static HashMap<String, CANTalon246> motors = new HashMap<>();	
 	
 	//denotes the category of help which should be returned
 	private enum HelpType {
@@ -84,7 +84,7 @@ public class CallReference {
 	}
 	
 	
-	private String handleMethod(String... args) {
+	private String handleMethod(String[] args) {
 		
 		//the string to be returned
 		String out = "\n";
@@ -104,14 +104,28 @@ public class CallReference {
 			//if the method is registered
 			if(methods.containsKey(args[1])) {
 				
+				//copy arguments starting from right after the method name to end of user call
+				//ex. methods:sampleMethod:arg1:arg2 would give a String[] {arg1,arg2}
+				String[] params = new String[args.length - 2];
+				for(int i = 0; i < params.length; i++) {
+					params[i] = args[i+2];
+				}
+				
 				//call method and return confirmation
-				methods.get(args[1]).callMethod();
-				out += "Method successfully called";
-			
-			//method wasn't found 
-			//(also where an unlisted command such as method:aiowdja will go)
-			} else {
-				out+= "Method not found";
+				try {
+					methods.get(args[1]).callMethod(params);
+					out += "Method successfully called";
+				
+				//not enough arguments
+				} catch(ArrayIndexOutOfBoundsException e) {
+					out += "Missing required arguments for method, needs " +
+							methods.get(args[1]).requiredParams();
+				
+				//unable to parse an argument to either a double or an int
+				} catch(NumberFormatException e) {
+					out += "Invalid numerical argument for method, needs " +
+							methods.get(args[1]).requiredParams();
+				}
 			}
 		
 		}

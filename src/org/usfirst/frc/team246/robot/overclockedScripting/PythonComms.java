@@ -18,12 +18,6 @@ public class PythonComms implements Runnable {
 	
 	private CallReference reference = new CallReference();
 	
-	//for debugging only
-	//public static void main(String[] args) {
-	//	initialize(8080);
-	//}
-	
-	
 	/**
 	 * Initialize this singleton. This method will first open a new socket to
 	 * listen to, then start running a second thread which responds to commands.
