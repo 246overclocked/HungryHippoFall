@@ -2,7 +2,6 @@ package org.usfirst.frc.team246.robot.overclockedLibraries;
 
 import java.util.ArrayList;
 
-import org.usfirst.frc.team246.robot.RobotMap;
 import org.usfirst.frc.team246.robot.overclockedLibraries.AlertMessage.Severity;
 
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
@@ -56,17 +55,37 @@ public class Diagnostics implements Runnable {
 	
 	/** Power Distribution Panel **/
 	private static PowerDistributionPanel pdp;
+	
+	/** Voltage at which the robot will brown out **/
+	private static double maxBrownoutVoltage;
+	
+	/** How close we're willing to let the robot get to brownout voltage **/
+	private static double brownoutVoltageTolerance;
+	
+	/** How soon the breaker will trip based on current **/
+	private static double[][] breakerTripTimeVsCurrent;
+	
+	/** Seconds before main breaker kicks in **/
+	private static double breakerTripTimeBuffer;
+	
 
 	/**
 	 * Initializes the diagnostics instance.
 	 */
-	public static void initialize(PowerDistributionPanel pdp) {
+	public static void initialize(PowerDistributionPanel pdp, double maxBrownoutVoltage, double brownoutVoltageTolerance, 
+									double[][] breakerTripTimeVsCurrent, double breakerTripTimeBuffer) {
 		if (instance == null) {
 			instance = new Diagnostics();
 			(new Thread(instance)).start();
 		}
 		
 		Diagnostics.pdp = pdp;
+		Diagnostics.maxBrownoutVoltage = maxBrownoutVoltage;
+		Diagnostics.brownoutVoltageTolerance = brownoutVoltageTolerance;
+		Diagnostics.breakerTripTimeVsCurrent = breakerTripTimeVsCurrent;
+		Diagnostics.breakerTripTimeBuffer = breakerTripTimeBuffer;
+	
+		
 	}
 	
 	/**
@@ -208,9 +227,9 @@ public class Diagnostics implements Runnable {
 	 * RobotMap.MAX_BROWNOUT_VOLTAGE.
 	 */
 	private static void monitorVoltage() {
-		nearingVoltageMin = pdp.getVoltage() - RobotMap.MAX_BROWNOUT_VOLTAGE < RobotMap.BROWNOUT_VOLTAGE_TOLERANCE;
+		nearingVoltageMin = pdp.getVoltage() - maxBrownoutVoltage < brownoutVoltageTolerance;
 		sendVoltageAlert();
-		voltageLeeway = RobotMap.BROWNOUT_VOLTAGE_TOLERANCE - (pdp.getVoltage() - RobotMap.MAX_BROWNOUT_VOLTAGE);
+		voltageLeeway = brownoutVoltageTolerance - (pdp.getVoltage() - maxBrownoutVoltage);
 	}
 
 	/**
@@ -226,9 +245,9 @@ public class Diagnostics implements Runnable {
 			} else {
 				double secondsInHighCurrent = Timer.getFPGATimestamp() - breakerStartTime;
 				double secondsRemaining = DataInterpolator.interpolateValue(secondsInHighCurrent,
-						RobotMap.BREAKER_TRIP_TIME_VS_CURRENT);
+						breakerTripTimeVsCurrent);
 
-				nearingCurrentMax = secondsRemaining <= RobotMap.BREAKER_TRIP_TIME_BUFFER;
+				nearingCurrentMax = secondsRemaining <= breakerTripTimeBuffer;
 				currentSecondsRemaining = secondsRemaining;
 				sendCurrentAlert(secondsRemaining);
 			}
