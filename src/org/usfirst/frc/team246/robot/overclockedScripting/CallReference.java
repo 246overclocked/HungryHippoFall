@@ -36,6 +36,13 @@ public class CallReference {
 			"{MOTOR_NAME:GET}-- gets the speed of MOTOR_NAME if it is registered"
 	};
 	
+	/**
+	 * Handles the given parsed arguments and calls the appropriate auxiliary
+	 * handler method.  
+	 *
+	 * @param args the String[] in parsed formed
+	 * @return the string containing the output of the command
+	 */
 	public String handle(String[] args) {
 		
 		//checks the first argument with no whitespace and 
@@ -58,6 +65,12 @@ public class CallReference {
 	}
 	
 	
+	/**
+	 * Auxiliary handler method for commands of type "all"
+	 *
+	 * @param args the String[] in parsed formed
+	 * @return the string containing the output of the command
+	 */
 	private String handleAll(String[] args) {
 		
 		//the string to be returned
@@ -84,6 +97,12 @@ public class CallReference {
 	}
 	
 	
+	/**
+	 * Auxiliary handler method for commands of type "method"
+	 *
+	 * @param args the String[] in parsed formed
+	 * @return the string containing the output of the command
+	 */
 	private String handleMethod(String[] args) {
 		
 		//the string to be returned
@@ -134,6 +153,12 @@ public class CallReference {
 	}
 	
 	
+	/**
+	 * Auxiliary handler method for commands of type "motor"
+	 *
+	 * @param args the String[] in parsed formed
+	 * @return the string containing the output of the command
+	 */
 	private String handleMotor(String[] args) {
 		
 		//the string to be returned
@@ -185,6 +210,12 @@ public class CallReference {
 		return out;
 	}
 	
+	/**
+	 * Lists the possible commands of the given command type- all, method, motor, other.
+	 *
+	 * @param h the enumerated help type
+	 * @return the string containing the list of possible commands of h
+	 */
 	private String listPossibleCommands(HelpType h) {
 		
 		String out = "";
@@ -223,6 +254,13 @@ public class CallReference {
 		}
 	}
 	
+	/**
+	 * Lists the registered methods/motors of the given command type- all, method, motor, other.
+	 * If "all" simply returns both methods and motor lists.
+	 *
+	 * @param h the enumerated help type
+	 * @return the string containing the list of registered methods/motors
+	 */
 	private String listRegistered(HelpType h) {
 		
 		String out = "";
@@ -269,10 +307,22 @@ public class CallReference {
 		return ("others: " +  Arrays.toString(args));
 	}
 	
+	/**
+	 * Adds the method to the Hashmap.
+	 *
+	 * @param name the name of the method to be added
+	 * @param method the MethodHolder object which wraps the target method
+	 */
 	public static void addMethod(String name, MethodHolder method) {
 		methods.put(name, method);
 	}
 	
+	/**
+	 * Adds the motor to the Hashmap
+	 *
+	 * @param name the name of the motor to be added
+	 * @param motor the CANTalon246 reference to the target motor
+	 */
 	public static void addMotor(String name, CANTalon246 motor) {
 		motors.put(name, motor);
 	}
