@@ -1,4 +1,7 @@
 package org.usfirst.frc.team246.robot;
+
+import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -7,7 +10,18 @@ package org.usfirst.frc.team246.robot;
  */
 public class RobotMap {
     
-	// Create constants and declare variables here
+// Electricity Monitoring Constants TODO garbage values :(
+	public static final double MINIMUM_SAFE_VOLTAGE = 11;
+	public static final double MINIMUM_SLIGHT_DANGER_VOLTAGE = 10;
+	public static final double MINIMUM_MODERATE_DANGER_VOLTAGE = 9;
+	public static final double MINIMUM_SEVERE_DANGER_VOLTAGE = 8;
+	
+// Testbed Motors (for electricity management)
+	public static CANTalon246 unimportant;
+	public static CANTalon246 important1;
+	public static CANTalon246 important2;
+	public static CANTalon246 alwaysRunning1;
+	public static CANTalon246 alwaysRunning2;
 	
 	public static void init() {
 		
