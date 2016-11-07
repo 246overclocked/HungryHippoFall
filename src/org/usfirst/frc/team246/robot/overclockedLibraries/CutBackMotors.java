@@ -35,14 +35,15 @@ public class CutBackMotors extends ElectricityManagement {
 
 	@Override
 	public void restoreSystems() {
-		// TODO Auto-generated method stub
-
+		restoreAppendage();
+		restoreDrivetrain();
 	}
 
 	@Override
 	public void cutNonCriticalSystems() {
-		// TODO Auto-generated method stub
-
+		cutUnimportant();
+		restoreAppendage();
+		restoreDrivetrain();
 	}
 
 	@Override
@@ -73,8 +74,16 @@ public class CutBackMotors extends ElectricityManagement {
 		//turn off those motors
 	}
 	
-	private void cutAlwaysRunning() {
-		//
+	private void cutDrivetrain() {
+		// scale back the voltage but don't shut it down
+	}
+	
+	private void restoreAppendage(){
+		//turn appendage back on??
+	}
+	
+	private void restoreDrivetrain() {
+		// scale back up to full power
 	}
 
 }
