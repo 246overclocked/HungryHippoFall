@@ -18,10 +18,10 @@ public class RobotMap {
 	
 // Testbed Motors (for electricity management)
 	public static CANTalon246 unimportant;
-	public static CANTalon246 important1;
-	public static CANTalon246 important2;
-	public static CANTalon246 alwaysRunning1;
-	public static CANTalon246 alwaysRunning2;
+	public static CANTalon246 appendage1;
+	public static CANTalon246 appendage2;
+	public static CANTalon246 drivetrain1;
+	public static CANTalon246 drivetrain2;
 	
 	public static void init() {
 		
