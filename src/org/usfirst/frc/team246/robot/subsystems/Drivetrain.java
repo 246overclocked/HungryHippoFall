@@ -4,9 +4,9 @@ import org.usfirst.frc.team246.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class Appendage extends Subsystem {
+public class Drivetrain extends Subsystem {
 
-	public Appendage() {
+	public Drivetrain() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -16,14 +16,14 @@ public class Appendage extends Subsystem {
 
 	}
 	
-	public void motorsOn() {
-		RobotMap.appendage1.set(1);
-		RobotMap.appendage2.set(1);
+	public static void drive(double speed1, double speed2) {
+		RobotMap.drivetrain1.set(speed1);
+		RobotMap.drivetrain2.set(speed2);
 	}
 	
-	public void motorsOff() {
-		RobotMap.appendage1.set(0);
-		RobotMap.appendage2.set(0);
+	public static void stop() {
+		RobotMap.drivetrain1.set(0);
+		RobotMap.drivetrain2.set(0);
 	}
-
 }
+

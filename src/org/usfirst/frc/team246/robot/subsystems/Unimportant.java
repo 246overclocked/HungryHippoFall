@@ -22,7 +22,7 @@ public class Unimportant extends Subsystem {
 	}
 	
 	public void motorOn() {
-		RobotMap.unimportant.set(0.5);
+		RobotMap.unimportant.set(1);
 	}
 
 }

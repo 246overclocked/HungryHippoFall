@@ -39,7 +39,7 @@ public class OI {
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
 	
-	public LogitechF310 driver;
+	public static LogitechF310 driver;
 	
 	public OI() {
 		
@@ -50,6 +50,7 @@ public class OI {
 		
 		driver.getLB().whenPressed(new AppendageOn());
 		driver.getLT().whenPressed(new AppendageOff());
+
 		
 		
 	}

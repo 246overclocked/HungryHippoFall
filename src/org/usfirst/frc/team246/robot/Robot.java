@@ -2,6 +2,7 @@
 package org.usfirst.frc.team246.robot;
 
 import org.usfirst.frc.team246.robot.subsystems.Appendage;
+import org.usfirst.frc.team246.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team246.robot.subsystems.Unimportant;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -19,6 +20,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static Unimportant useless;
 	public static Appendage appendage;
+	public static Drivetrain drivetrain;
 	// Declare subsystem variables here
 
     /**
@@ -31,6 +33,7 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		useless = new Unimportant();
 		appendage = new Appendage();
+		drivetrain = new Drivetrain();
 
 		// Instantiate subsytem objects here
     }

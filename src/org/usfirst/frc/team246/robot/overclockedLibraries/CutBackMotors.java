@@ -1,6 +1,12 @@
 package org.usfirst.frc.team246.robot.overclockedLibraries;
 
 import org.usfirst.frc.team246.robot.RobotMap;
+import org.usfirst.frc.team246.robot.commands.AppendageOff;
+import org.usfirst.frc.team246.robot.commands.AppendageOn;
+import org.usfirst.frc.team246.robot.commands.Drive;
+import org.usfirst.frc.team246.robot.commands.StopDrivetrain;
+import org.usfirst.frc.team246.robot.commands.UnimportantOff;
+import org.usfirst.frc.team246.robot.commands.UnimportantOn;
 
 public class CutBackMotors extends ElectricityManagement {
 
@@ -35,6 +41,7 @@ public class CutBackMotors extends ElectricityManagement {
 
 	@Override
 	public void restoreSystems() {
+		restoreUnimportant();
 		restoreAppendage();
 		restoreDrivetrain();
 	}
@@ -72,28 +79,27 @@ public class CutBackMotors extends ElectricityManagement {
 	// Methods for doing things to motors
 	
 	private void cutUnimportant() {
-		RobotMap.unimportant.set(0); //TODO is this right?
+		(new UnimportantOff()).start();
 	}
 	
 	private void cutAppendage() {
-		RobotMap.appendage1.set(0);
-		RobotMap.appendage2.set(0);
+		(new AppendageOff()).start();
 	}
 	
 	private void cutDrivetrain() {
-		// scale back the voltage but don't shut it down
+		(new StopDrivetrain()).start();
 	}
 	
 	private void restoreUnimportant(){
-		//turn appendage back on??
+		(new UnimportantOn()).start();
 	}
 	
 	private void restoreAppendage(){
-		//turn appendage back on??
+		(new AppendageOn()).start();
 	}
 	
 	private void restoreDrivetrain() {
-		// scale back up to full power
+		(new Drive()).start();
 	}
 
 }

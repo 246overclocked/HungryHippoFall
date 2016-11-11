@@ -23,6 +23,10 @@ public class RobotMap {
 	public static CANTalon246 drivetrain1;
 	public static CANTalon246 drivetrain2;
 	
+// Testbed Motor Constants
+	
+	//public static final double DRIVETRAIN_MAX_VOLTAGE = 1;
+	
 	public static void init() {
 		
 		// Instantiate and configure objects here
