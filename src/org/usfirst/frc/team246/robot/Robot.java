@@ -1,12 +1,12 @@
 
 package org.usfirst.frc.team246.robot;
 
+import org.usfirst.frc.team246.robot.subsystems.Appendage;
+import org.usfirst.frc.team246.robot.subsystems.Unimportant;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -17,7 +17,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 	public static OI oi;
-	
+	public static Unimportant useless;
+	public static Appendage appendage;
 	// Declare subsystem variables here
 
     /**
@@ -28,6 +29,8 @@ public class Robot extends IterativeRobot {
     	RobotMap.init();
     	
 		oi = new OI();
+		useless = new Unimportant();
+		appendage = new Appendage();
 
 		// Instantiate subsytem objects here
     }

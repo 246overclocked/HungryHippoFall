@@ -48,34 +48,44 @@ public class CutBackMotors extends ElectricityManagement {
 
 	@Override
 	public void cutBackAllModerate() {
-		// TODO Auto-generated method stub
+		cutUnimportant();
+		cutAppendage();
+		restoreDrivetrain();
 
 	}
 
 	@Override
 	public void cutBackAllSevere() {
-		// TODO Auto-generated method stub
+		cutUnimportant();
+		cutAppendage();
 
 	}
 
 	@Override
 	public void cutBackAllExtreme() {
-		// TODO Auto-generated method stub
+		cutUnimportant();
+		cutAppendage();
+		cutDrivetrain();
 
 	}
 	
 	// Methods for doing things to motors
 	
 	private void cutUnimportant() {
-		//turn off that motor
+		RobotMap.unimportant.set(0); //TODO is this right?
 	}
 	
 	private void cutAppendage() {
-		//turn off those motors
+		RobotMap.appendage1.set(0);
+		RobotMap.appendage2.set(0);
 	}
 	
 	private void cutDrivetrain() {
 		// scale back the voltage but don't shut it down
+	}
+	
+	private void restoreUnimportant(){
+		//turn appendage back on??
 	}
 	
 	private void restoreAppendage(){
