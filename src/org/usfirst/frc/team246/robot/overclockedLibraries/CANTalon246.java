@@ -130,6 +130,10 @@ public class CANTalon246 extends CANTalon {
 		otherTalon.type = SensorType.OTHER;
 		return otherTalon;
 	}
+	
+	public SensorType getSensorType() {
+		return type;
+	}
 
 	/**
 	 * Convert speed per second to per unit based on the set {@link SpeedUnit}.

@@ -1,6 +1,12 @@
 
 package org.usfirst.frc.team246.robot;
 
+import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
+import org.usfirst.frc.team246.robot.overclockedScripting.CallReference;
+import org.usfirst.frc.team246.robot.overclockedScripting.MethodHolder;
+import org.usfirst.frc.team246.robot.overclockedScripting.PythonComms;
+
+import edu.wpi.first.wpilibj.CANTalon.TalonControlMode;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -15,6 +21,8 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 public class Robot extends IterativeRobot {
 	public static OI oi;
 	
+	
+	
 	// Declare subsystem variables here
 
     /**
@@ -27,6 +35,40 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 
 		// Instantiate subsytem objects here
+		
+		CANTalon246 testMotor1 = CANTalon246.init(2, 10);
+		CANTalon246 testMotor2 = CANTalon246.init(3, 10);
+		CANTalon246 testMotor3 = CANTalon246.init(4, 10);
+		
+		testMotor1.changeControlMode(TalonControlMode.PercentVbus);
+		testMotor2.changeControlMode(TalonControlMode.PercentVbus);
+		testMotor3.changeControlMode(TalonControlMode.PercentVbus);
+		
+		CallReference.addMotor("testMotor1", testMotor1);
+		CallReference.addMotor("testMotor2", testMotor2);
+		CallReference.addMotor("testMotor3", testMotor3);
+		
+		CallReference.addMethod("stopAllMotors", new MethodHolder() {
+			
+			@Override
+			public String requiredParams() {
+				return null;
+			}
+			
+			@Override
+			public void callMethod(String[] args) throws ArrayIndexOutOfBoundsException, NumberFormatException {
+				stopAllMotors();
+			}
+		});
+		
+		PythonComms comms = new PythonComms();
+		comms.initialize(8080);
+    }
+    
+    private void stopAllMotors() {
+    	CallReference.motors.get("testMotor1").set(0);
+    	CallReference.motors.get("testMotor2").set(0);
+    	CallReference.motors.get("testMotor3").set(0);
     }
 	
 	/**

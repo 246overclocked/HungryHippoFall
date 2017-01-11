@@ -21,6 +21,10 @@ public abstract class MethodHolder {
 
 	/**
 	 * Returns a list of required parameters for the wrapped method.
+	 * 
+	 * When returning the string with the parameter types, return in the format
+	 * "{Type}, {Type}, ..." where {Type} is the primitive or object name as seen
+	 * in Java, ex. "double, CANTalon246, String" 
 	 *
 	 * @return the string with the required parameters for the wrapped methods.
 	 */

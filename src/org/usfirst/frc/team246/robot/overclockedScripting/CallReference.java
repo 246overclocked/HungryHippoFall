@@ -18,22 +18,40 @@ public class CallReference {
 		ALL, METHODS, MOTORS, OTHER
 	}
 	
+	private enum MotorCommandType {
+		LIST ("lists all registered motors"),
+		SET_POWER ("runs motor at specified raw power"),
+		SET_SPEED ("runs motor at speed if it is registered"),
+		SET_POSITION ("sets the encoder or PID position of the motor"),
+		GET_POWER ("gets the raw power of the motor"),
+		GET_SPEED ("gets the speed of motor if it is registered"),
+		GET_POSITION ("gets the encoder or PID position of the motor"),
+		GET_CURRENT ("gets the current in the motor"),
+		INVALID ("");
+		
+		private final String d;
+		
+		private MotorCommandType(String s) {
+			d = s;
+		}
+	}
+	
+	private enum MethodCommandType {
+		LIST ("lists all registered methods"),
+		METHOD_NAME ("executes the specified method with given arguments"),
+		INVALID ("");
+		
+		private final String d;
+		
+		private MethodCommandType(String s) {
+			d = s;
+		}
+	}
+	
+	
 	//possible commands for the type all
 	private final String[] ALL_DESCRIPTIONS = {
 		"list-- lists all registered methods and motors"
-	};
-	
-	//possible commands for the type method
-	private final String[] METHOD_DESCRIPTIONS = {
-		"list-- lists all registered methods",
-		"{METHOD_NAME}-- executes METHOD_NAME if it is registered"
-	};
-	
-	//possible commands for the type motor
-	private final String[] MOTOR_DESCRIPTIONS = {
-			"list-- lists all registered motors",
-			"{MOTOR_NAME:SPEED}-- runs MOTOR_NAME at SPEED if it is registered",
-			"{MOTOR_NAME:GET}-- gets the speed of MOTOR_NAME if it is registered"
 	};
 	
 	/**
@@ -110,46 +128,62 @@ public class CallReference {
 		
 		//only argument is "methods"
 		if(args.length == 1)  {
-		
 			out += listPossibleCommands(HelpType.METHODS);
-		
-		//arguments are "methods" and "list"
-		} else if(args[1].equals("list")) {
-		
-			out += listRegistered(HelpType.METHODS);
-			
 		} else {
-		
-			//if the method is registered
-			if(methods.containsKey(args[1])) {
-				
-				//copy arguments starting from right after the method name to end of user call
-				//ex. methods:sampleMethod:arg1:arg2 would give a String[] {arg1,arg2}
-				String[] params = new String[args.length - 2];
-				for(int i = 0; i < params.length; i++) {
-					params[i] = args[i+2];
+			switch(findMethodOperation(args)) {
+				case LIST: {
+					out += listRegistered(HelpType.METHODS);
+					break;
 				}
-				
-				//call method and return confirmation
-				try {
-					methods.get(args[1]).callMethod(params);
-					out += "Method successfully called";
-				
-				//not enough arguments
-				} catch(ArrayIndexOutOfBoundsException e) {
-					out += "Missing required arguments for method, needs " +
-							methods.get(args[1]).requiredParams();
-				
-				//unable to parse an argument to either a double or an int
-				} catch(NumberFormatException e) {
-					out += "Invalid numerical argument for method, needs " +
-							methods.get(args[1]).requiredParams();
+				case METHOD_NAME: {
+					//copy arguments starting from right after the method name to end of user call
+					//ex. methods:sampleMethod:arg1:arg2 would give a String[] {arg1,arg2}
+					String[] params = new String[args.length - 2];
+					for(int i = 0; i < params.length; i++) {
+						params[i] = args[i+2];
+					}
+					
+					//call method and return confirmation
+					try {
+						methods.get(args[1]).callMethod(params);
+						out += "Method successfully called";
+					
+					//not enough arguments
+					} catch(ArrayIndexOutOfBoundsException e) {
+						out += "Missing required arguments for method, needs " +
+								methods.get(args[1]).requiredParams();
+					
+					//unable to parse an argument to either a double or an int
+					} catch(NumberFormatException e) {
+						out += "Invalid numerical argument for method, needs " +
+								methods.get(args[1]).requiredParams();
+					}
+				}
+				case INVALID: {
+					out += "Invalid argument. Method may not be registered or method command may not be valid."
+							+ "\nTry \"methods:list\" for a list of registered methods or \"methods\" for a list of "
+							+ "possible commands" + Arrays.toString(args);
+					break;
 				}
 			}
-		
 		}
 		
 		return out;
+	}
+	
+	private MethodCommandType findMethodOperation(String[] args) {
+		if(methods.containsKey(args[1])) {
+			return MethodCommandType.METHOD_NAME;
+		} else {
+			switch(args[1]) {
+				case "list": {
+					return MethodCommandType.LIST;
+				}
+				default: {
+					return MethodCommandType.INVALID;
+				}
+			}
+		}
 	}
 	
 	
@@ -166,48 +200,110 @@ public class CallReference {
 		
 		//only argument was "motors"
 		if(args.length == 1) {
-		
 			out += listPossibleCommands(HelpType.MOTORS);
-		
-		//arguments were "motors" and "list"
-		} else if(args[1].equals("list")) {
-		
-			out += listRegistered(HelpType.MOTORS);
-			
 		} else {
-		
-			//if motor is registered and there is a second parameter
-			if(motors.containsKey(args[1]) && args.length > 2) {	
-				
-				//if the second argument is a valid integer, set motor at speed
-				try {
-					motors.get(args[1]).scaledSet(Double.parseDouble(args[2]));
-					out += "Set " + args[1] + " at " + Integer.parseInt(args[2]);
-					
-				//if not a valid integer, check for other arguments
-				} catch (NumberFormatException e) {
-					
-					//second argument is "get", return the speed of the specified motor
-					if(args[2].equals("get")) {
-						out += args[1] + " is at speed: " + motors.get(args[1]).getScaledSpeed();
-						
-					//not a listed second argument
-					} else {
-						out += "Invalid second argument for type motor, try \"motors\" for help";
-					}
+			switch(findMotorOperation(args)) {
+				case LIST: {
+					out += listRegistered(HelpType.MOTORS);
+					break;
 				}
-				
-			//motor is not registered
-			} else if(!motors.containsKey(args[1])) {
-				out += "Motor not found";
-				
-			//specified command for type motor was not found
-			} else {
-				out += "Invalid second argument";
+				case SET_POWER: {
+					CANTalon246 motor = motors.get(args[1]);
+					//if the second argument is a valid integer, set motor at speed
+					try {
+						out += "setting speed " + Arrays.toString(args) + " " + args[3] + "\n";
+						motor.set(Double.parseDouble(args[3]));
+						out += "Set " + args[1] + " at " + Double.parseDouble(args[3]);
+					//if not a valid integer, check for other arguments
+					} catch (NumberFormatException e) {
+						out += "Entered an invalid double as power, try again.";
+					}
+					break;
+				}
+				case GET_POWER: {
+					out += args[1] + " is at speed: " + motors.get(args[1]).get();
+					break;
+				}
+				case SET_SPEED: {
+					CANTalon246 motor = motors.get(args[1]);
+					//if the second argument is a valid integer, set motor at speed
+					try {
+						out += "setting speed " + Arrays.toString(args) + " " + args[3] + "\n";
+						motor.scaledSet(Double.parseDouble(args[3]));
+						out += "Set " + args[1] + " at " + Double.parseDouble(args[3]);
+					//if not a valid integer, check for other arguments
+					} catch (NumberFormatException e) {
+						out += "Entered an invalid double as power, try again.";
+					}
+					break;
+				}
+				case GET_SPEED: {
+					out += args[1] + " is at speed: " + motors.get(args[1]).getScaledSpeed();
+					break;
+				}
+				case SET_POSITION: {
+					try {
+						motors.get(args[1]).setScaledPosition(Double.parseDouble(args[2]));
+						out += "Set scalepoint of " + args[1] + " at " + Double.parseDouble(args[2]);
+					} catch (NumberFormatException e) {
+						out += "Entered an invalid double, try again.";
+					}
+					break;
+				}
+				case GET_POSITION: {
+					out += args[1] + " is at position: " + motors.get(args[1]).getScaledPosition();
+					break;
+				}
+				case GET_CURRENT: {
+					out += args[1] + " is at current: " + motors.get(args[1]).getOutputCurrent();
+					break;
+				}
+				case INVALID: {
+					out += "Invalid argument. Motor may not be registered or motor command may not be valid."
+							+ "\nTry \"motors:list\" for a list of registered motors or \"motors\" for a list of "
+							+ "possible commands" + Arrays.toString(args);
+					break;
+				}
 			}
 		}
 		
+		
 		return out;
+	}
+	
+	private MotorCommandType findMotorOperation(String[] args) {
+		if(args[1].equals("list")) {	
+			return MotorCommandType.LIST;
+		} else if(motors.containsKey(args[1]) && args.length > 1) {
+			switch(args[2]) {
+				case "setPower": {
+					return MotorCommandType.SET_POWER;
+				}
+				case "getPower": {
+					return MotorCommandType.GET_POWER;
+				}
+				case "setSpeed": {
+					return MotorCommandType.SET_SPEED;
+				}
+				case "getSpeed": {
+					return MotorCommandType.GET_SPEED;
+				}
+				case "setPosition": {
+					return MotorCommandType.SET_POSITION;
+				}
+				case "getPosition": {
+					return MotorCommandType.GET_POSITION;
+				}
+				case "getCurrent": {
+					return MotorCommandType.GET_CURRENT;
+				}
+				default: {
+					return MotorCommandType.INVALID;
+				}
+			}
+		} else {
+			return MotorCommandType.INVALID;
+		}
 	}
 	
 	/**
@@ -233,8 +329,10 @@ public class CallReference {
 			case METHODS: {
 				out += "Possible commands for type method:\n";
 				
-				for(String d : METHOD_DESCRIPTIONS) {
-					out += d + "\n";
+				for(MethodCommandType m : MethodCommandType.values()) {
+					if(m.d != "") {
+						out += "\n" + m.name() + "-- " + m.d;
+					}
 				}
 				
 				return out;
@@ -242,8 +340,10 @@ public class CallReference {
 			case MOTORS: {
 				out += "Possible commands for type motor:\n";
 				
-				for(String d : MOTOR_DESCRIPTIONS) {
-					out += d + "\n";
+				for(MotorCommandType m : MotorCommandType.values()) {
+					if(m.d != "") {
+						out += "\n" + m.name() + "-- " + m.d;
+					}
 				}
 				
 				return out;
@@ -278,6 +378,7 @@ public class CallReference {
 				}
 			
 				return out;
+				
 			}
 			case METHODS: {
 	
