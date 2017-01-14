@@ -1,0 +1,672 @@
+17/Jan/2016 21:28:16,822- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 21:28:20,833- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 21:28:20,833- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 21:28:20,982- InternetController: No valid JRE found
+17/Jan/2016 21:28:38,525- InternetController: Starting internet check
+17/Jan/2016 21:28:39,513- InternetController: Internet check successful, moving to download
+17/Jan/2016 21:28:39,515- AbstractController: Moving to controller DOWNLOAD_CONTROLLER
+17/Jan/2016 21:28:39,515- ControllerFactory: Loading controller DOWNLOAD_CONTROLLER
+17/Jan/2016 21:28:40,782- DownloadController: Loading download page page
+17/Jan/2016 21:28:40,784- DownloadController: Loading download page page
+17/Jan/2016 21:28:47,975- DownloadController: Loading download page page
+17/Jan/2016 21:29:02,547- DownloadController: Loading unknown page
+17/Jan/2016 21:29:02,548- DownloadController: Loading unknown page
+17/Jan/2016 21:29:05,756- DownloadController: Loading unknown page
+17/Jan/2016 21:29:05,776- DownloadController: Loading login page
+17/Jan/2016 21:29:05,776- DownloadController: Loading login page
+17/Jan/2016 21:29:07,112- DownloadController: Loading login page
+17/Jan/2016 21:29:15,875- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 21:29:15,875- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 21:29:15,890- InternetController: No valid JRE found
+17/Jan/2016 21:29:16,809- InternetController: Starting internet check
+17/Jan/2016 21:29:18,292- InternetController: Internet check successful, moving to download
+17/Jan/2016 21:29:18,293- AbstractController: Moving to controller DOWNLOAD_CONTROLLER
+17/Jan/2016 21:29:18,293- ControllerFactory: Loading controller DOWNLOAD_CONTROLLER
+17/Jan/2016 21:29:18,313- DownloadController: Loading download page page
+17/Jan/2016 21:29:18,313- DownloadController: Loading download page page
+17/Jan/2016 21:29:21,476- DownloadController: Loading download page page
+17/Jan/2016 21:29:32,890- DownloadController: Loading unknown page
+17/Jan/2016 21:29:32,890- DownloadController: Loading unknown page
+17/Jan/2016 21:29:33,278- DownloadController: Loading unknown page
+17/Jan/2016 21:29:33,297- DownloadController: Loading login page
+17/Jan/2016 21:29:33,297- DownloadController: Loading login page
+17/Jan/2016 21:29:33,429- DownloadController: Loading login page
+17/Jan/2016 21:29:49,233- DownloadController: Loading account creation page
+17/Jan/2016 21:29:49,234- DownloadController: Loading account creation page
+17/Jan/2016 21:29:49,935- DownloadController: Loading account creation page
+17/Jan/2016 21:29:49,947- DownloadController: Loading account creation page
+17/Jan/2016 21:29:49,947- DownloadController: Loading account creation page
+17/Jan/2016 21:29:53,738- DownloadController: Loading account creation page
+17/Jan/2016 21:31:15,075- DownloadController: Loading unknown page
+17/Jan/2016 21:31:15,075- DownloadController: Loading unknown page
+17/Jan/2016 21:31:16,130- DownloadController: Loading unknown page
+17/Jan/2016 21:31:20,322- DownloadController: Loading unknown page
+17/Jan/2016 21:31:20,323- DownloadController: Loading unknown page
+17/Jan/2016 21:31:20,622- DownloadController: Loading unknown page
+17/Jan/2016 21:31:20,641- DownloadController: Loading login page
+17/Jan/2016 21:31:20,641- DownloadController: Loading login page
+17/Jan/2016 21:31:20,775- DownloadController: Loading login page
+17/Jan/2016 21:31:30,067- DownloadController: Loading unknown page
+17/Jan/2016 21:31:30,068- DownloadController: Loading unknown page
+17/Jan/2016 21:31:31,467- DownloadController: Loading unknown page
+17/Jan/2016 21:31:31,478- DownloadController: Loading login page
+17/Jan/2016 21:31:31,479- DownloadController: Loading login page
+17/Jan/2016 21:31:31,786- DownloadController: Loading login page
+17/Jan/2016 21:31:39,330- DownloadController: Loading unknown page
+17/Jan/2016 21:31:39,330- DownloadController: Loading unknown page
+17/Jan/2016 21:31:39,890- DownloadController: Signed in and have the .tar.gz link.
+17/Jan/2016 21:31:39,891- AbstractController: Moving to controller DOWNLOAD_PROGRESS_CONTROLLER
+17/Jan/2016 21:31:39,891- ControllerFactory: Loading controller DOWNLOAD_PROGRESS_CONTROLLER
+17/Jan/2016 21:31:40,011- DownloadProgressController: Initial url is https://edelivery.oracle.com/akam/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz
+17/Jan/2016 21:31:40,066- DownloadController: Loading unknown page
+17/Jan/2016 21:31:40,107- DownloadProgressController: Redirecting to http://download.oracle.com/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz?AuthParam=1453084431_7317145a16c1f1de3d7fed1c7d02194b
+17/Jan/2016 21:31:40,173- DownloadProgressController: Final url is http://download.oracle.com/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz?AuthParam=1453084431_7317145a16c1f1de3d7fed1c7d02194b
+17/Jan/2016 21:31:40,174- DownloadProgressController: Starting JRE Creator download. File size is 121568917 bytes
+17/Jan/2016 21:32:14,970- DownloadProgressController: Downloaded JRE
+17/Jan/2016 21:32:14,976- AbstractController: Moving to controller UNTAR_CONTROLLER
+17/Jan/2016 21:32:14,976- ControllerFactory: Loading controller UNTAR_CONTROLLER
+17/Jan/2016 21:32:15,102- UntarController: Starting decompress of file C:\Users\asus1\wpilib\tools\.\ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz to C:\Users\asus1\wpilib\tools\.
+17/Jan/2016 21:32:18,188- AbstractController: Moving to controller CREATE_JRE_CONTROLLER
+17/Jan/2016 21:32:18,188- ControllerFactory: Loading controller CREATE_JRE_CONTROLLER
+17/Jan/2016 21:32:18,200- CreateJreController: Staring JRE Creation
+17/Jan/2016 21:32:18,200- CreateJreController: Creator location: C:\Users\asus1\wpilib\tools\.\ejdk1.8.0_06\lib\JRECreate.jar
+17/Jan/2016 21:32:18,200- CreateJreController: Command: [java, -jar, C:\Users\asus1\wpilib\tools\.\ejdk1.8.0_06\lib\JRECreate.jar, --dest, JRE, --profile, compact2, --vm, client, --keep-debug-info, --debug]
+17/Jan/2016 21:32:18,200- CreateJreController: EJDK_HOME: C:\Users\asus1\wpilib\tools\.\ejdk1.8.0_06
+17/Jan/2016 21:32:20,082- CreateJreController: Successfully Created JRE!
+17/Jan/2016 21:32:20,088- AbstractController: Moving to controller TAR_JRE_CONTROLLER
+17/Jan/2016 21:32:20,088- ControllerFactory: Loading controller TAR_JRE_CONTROLLER
+17/Jan/2016 21:32:20,110- TarJREController: Starting zip
+17/Jan/2016 21:32:22,896- TarJREController: Finished zip, starting md5 hash
+17/Jan/2016 21:32:23,607- TarJREController: Finished md5 hash, hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 21:32:23,610- AbstractController: Moving to controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:32:23,610- ControllerFactory: Loading controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:32:33,172- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:32:33,174- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:32:45,790- ConnectRoboRioController: roborio-246-frc.local is reachable
+17/Jan/2016 21:32:45,792- ConnectRoboRioController: Found mDNS connection
+17/Jan/2016 21:32:45,792- AbstractController: Moving to controller DEPLOY_CONTROLLER
+17/Jan/2016 21:32:45,793- ControllerFactory: Loading controller DEPLOY_CONTROLLER
+17/Jan/2016 21:32:46,913- DeployController: Failure to send JRE to the roboRio
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:349) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.DeployController.transferJRE(DeployController.java:57) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at com.jcraft.jsch.Util.createSocket(Util.java:343) ~[java-installer.jar:?]
+	... 4 more
+17/Jan/2016 21:32:53,761- ErrorController: Exiting from error screen
+17/Jan/2016 21:32:56,200- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 21:33:02,457- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 21:33:02,458- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 21:33:02,714- MainApp: Computed hash is AE7E60288C11BC7704F7879AD1FED8F7, official hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 21:33:02,714- InternetController: Found created JRE, setting next controller to be connect roborio
+17/Jan/2016 21:33:04,598- AbstractController: Moving to controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:33:04,598- ControllerFactory: Loading controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:33:09,709- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:33:09,712- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:33:13,315- ConnectRoboRioController: roborio-246-frc.local is reachable
+17/Jan/2016 21:33:13,316- ConnectRoboRioController: Found mDNS connection
+17/Jan/2016 21:33:13,316- AbstractController: Moving to controller DEPLOY_CONTROLLER
+17/Jan/2016 21:33:13,318- ControllerFactory: Loading controller DEPLOY_CONTROLLER
+17/Jan/2016 21:33:14,606- DeployController: Failure to send JRE to the roboRio
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:349) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.DeployController.transferJRE(DeployController.java:57) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at com.jcraft.jsch.Util.createSocket(Util.java:343) ~[java-installer.jar:?]
+	... 4 more
+17/Jan/2016 21:33:31,021- ErrorController: Exiting from error screen
+17/Jan/2016 21:33:33,728- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 21:33:36,288- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 21:33:36,289- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 21:33:36,908- MainApp: Computed hash is AE7E60288C11BC7704F7879AD1FED8F7, official hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 21:33:36,908- InternetController: Found created JRE, setting next controller to be connect roborio
+17/Jan/2016 21:33:38,772- AbstractController: Moving to controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:33:38,773- ControllerFactory: Loading controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:34:24,571- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:34:24,572- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:34:27,929- ConnectRoboRioController: roborio-246-frc.local is reachable
+17/Jan/2016 21:34:27,930- ConnectRoboRioController: Found mDNS connection
+17/Jan/2016 21:34:27,931- AbstractController: Moving to controller DEPLOY_CONTROLLER
+17/Jan/2016 21:34:27,932- ControllerFactory: Loading controller DEPLOY_CONTROLLER
+17/Jan/2016 21:34:29,274- DeployController: Failure to send JRE to the roboRio
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:349) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.DeployController.transferJRE(DeployController.java:57) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at com.jcraft.jsch.Util.createSocket(Util.java:343) ~[java-installer.jar:?]
+	... 4 more
+17/Jan/2016 21:34:31,629- ErrorController: Exiting from error screen
+17/Jan/2016 21:34:33,987- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 21:36:06,521- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 21:36:06,522- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 21:36:06,743- MainApp: Computed hash is AE7E60288C11BC7704F7879AD1FED8F7, official hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 21:36:06,743- InternetController: Found created JRE, setting next controller to be connect roborio
+17/Jan/2016 21:36:09,187- AbstractController: Moving to controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:36:09,188- ControllerFactory: Loading controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:36:15,877- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:36:15,880- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:36:23,513- ConnectRoboRioController: roborio-246-frc.local is reachable
+17/Jan/2016 21:36:23,515- ConnectRoboRioController: Found mDNS connection
+17/Jan/2016 21:36:23,516- AbstractController: Moving to controller DEPLOY_CONTROLLER
+17/Jan/2016 21:36:23,517- ControllerFactory: Loading controller DEPLOY_CONTROLLER
+17/Jan/2016 21:36:24,845- DeployController: Failure to send JRE to the roboRio
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:349) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.DeployController.transferJRE(DeployController.java:57) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at com.jcraft.jsch.Util.createSocket(Util.java:343) ~[java-installer.jar:?]
+	... 4 more
+17/Jan/2016 21:36:29,861- ErrorController: Exiting from error screen
+17/Jan/2016 21:38:59,916- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 21:39:02,381- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 21:39:02,382- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 21:39:02,682- MainApp: Computed hash is AE7E60288C11BC7704F7879AD1FED8F7, official hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 21:39:02,682- InternetController: Found created JRE, setting next controller to be connect roborio
+17/Jan/2016 21:39:05,999- AbstractController: Moving to controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:39:05,999- ControllerFactory: Loading controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:39:10,620- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:39:10,621- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:39:21,004- ConnectRoboRioController: Could not connect to the roboRio at roborio-246-frc.local
+java.net.UnknownHostException: roborio-246-frc.local
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.8.0_60]
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName0(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getByName(Unknown Source) ~[?:1.8.0_60]
+	at edu.wpi.first.wpilib.javainstaller.controllers.ConnectRoboRioController.checkReachableAndContinue(ConnectRoboRioController.java:136) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.ConnectRoboRioController.lambda$handleNext$31(ConnectRoboRioController.java:98) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+17/Jan/2016 21:39:21,024- ConnectRoboRioController: No mDNS connection found, checking for USB Connection to the roboRio
+17/Jan/2016 21:39:26,027- ConnectRoboRioController: Connection to 172.22.11.2 timed out.
+17/Jan/2016 21:39:26,028- ConnectRoboRioController: No usb connection found, checking for ethernet connection to the roboRio
+17/Jan/2016 21:39:31,031- ConnectRoboRioController: Connection to 10.2.46.2 timed out.
+17/Jan/2016 21:39:35,264- ConnectRoboRioController: Could not connect to the roboRio at roborio-246-frc.local or 172.22.11.2 or 10.2.46.2
+17/Jan/2016 21:39:37,922- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:39:37,923- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:39:48,423- ConnectRoboRioController: Could not connect to the roboRio at roborio-246-frc.local
+java.net.UnknownHostException: roborio-246-frc.local
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.8.0_60]
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName0(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getByName(Unknown Source) ~[?:1.8.0_60]
+	at edu.wpi.first.wpilib.javainstaller.controllers.ConnectRoboRioController.checkReachableAndContinue(ConnectRoboRioController.java:136) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.ConnectRoboRioController.lambda$handleNext$31(ConnectRoboRioController.java:98) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+17/Jan/2016 21:39:48,424- ConnectRoboRioController: No mDNS connection found, checking for USB Connection to the roboRio
+17/Jan/2016 21:39:53,427- ConnectRoboRioController: Connection to 172.22.11.2 timed out.
+17/Jan/2016 21:39:53,428- ConnectRoboRioController: No usb connection found, checking for ethernet connection to the roboRio
+17/Jan/2016 21:39:58,429- ConnectRoboRioController: Connection to 10.2.46.2 timed out.
+17/Jan/2016 21:40:03,089- ConnectRoboRioController: Could not connect to the roboRio at roborio-246-frc.local or 172.22.11.2 or 10.2.46.2
+17/Jan/2016 21:40:05,951- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:40:05,953- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:40:16,485- ConnectRoboRioController: Could not connect to the roboRio at roborio-246-frc.local
+java.net.UnknownHostException: roborio-246-frc.local
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.8.0_60]
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName0(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getByName(Unknown Source) ~[?:1.8.0_60]
+	at edu.wpi.first.wpilib.javainstaller.controllers.ConnectRoboRioController.checkReachableAndContinue(ConnectRoboRioController.java:136) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.ConnectRoboRioController.lambda$handleNext$31(ConnectRoboRioController.java:98) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+17/Jan/2016 21:40:16,486- ConnectRoboRioController: No mDNS connection found, checking for USB Connection to the roboRio
+17/Jan/2016 21:40:21,487- ConnectRoboRioController: Connection to 172.22.11.2 timed out.
+17/Jan/2016 21:40:21,487- ConnectRoboRioController: No usb connection found, checking for ethernet connection to the roboRio
+17/Jan/2016 21:40:26,489- ConnectRoboRioController: Connection to 10.2.46.2 timed out.
+17/Jan/2016 21:40:34,481- ConnectRoboRioController: Could not connect to the roboRio at roborio-246-frc.local or 172.22.11.2 or 10.2.46.2
+17/Jan/2016 21:40:38,767- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:40:38,769- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:40:49,252- ConnectRoboRioController: Could not connect to the roboRio at roborio-246-frc.local
+java.net.UnknownHostException: roborio-246-frc.local
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.8.0_60]
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName0(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getAllByName(Unknown Source) ~[?:1.8.0_60]
+	at java.net.InetAddress.getByName(Unknown Source) ~[?:1.8.0_60]
+	at edu.wpi.first.wpilib.javainstaller.controllers.ConnectRoboRioController.checkReachableAndContinue(ConnectRoboRioController.java:136) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.ConnectRoboRioController.lambda$handleNext$31(ConnectRoboRioController.java:98) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+17/Jan/2016 21:40:49,254- ConnectRoboRioController: No mDNS connection found, checking for USB Connection to the roboRio
+17/Jan/2016 21:40:54,257- ConnectRoboRioController: Connection to 172.22.11.2 timed out.
+17/Jan/2016 21:40:54,257- ConnectRoboRioController: No usb connection found, checking for ethernet connection to the roboRio
+17/Jan/2016 21:40:59,257- ConnectRoboRioController: Connection to 10.2.46.2 timed out.
+17/Jan/2016 21:42:27,389- ConnectRoboRioController: Could not connect to the roboRio at roborio-246-frc.local or 172.22.11.2 or 10.2.46.2
+17/Jan/2016 21:43:43,908- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:43:43,910- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:43:47,415- ConnectRoboRioController: roborio-246-frc.local is reachable
+17/Jan/2016 21:43:47,416- ConnectRoboRioController: Found mDNS connection
+17/Jan/2016 21:43:47,417- AbstractController: Moving to controller DEPLOY_CONTROLLER
+17/Jan/2016 21:43:47,417- ControllerFactory: Loading controller DEPLOY_CONTROLLER
+17/Jan/2016 21:43:48,591- DeployController: Failure to send JRE to the roboRio
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:349) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[java-installer.jar:?]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.DeployController.transferJRE(DeployController.java:57) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.8.0_60]
+	at com.jcraft.jsch.Util.createSocket(Util.java:343) ~[java-installer.jar:?]
+	... 4 more
+17/Jan/2016 21:49:03,758- ErrorController: Exiting from error screen
+17/Jan/2016 21:49:09,947- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 21:49:12,397- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 21:49:12,397- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 21:49:12,725- MainApp: Computed hash is AE7E60288C11BC7704F7879AD1FED8F7, official hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 21:49:12,725- InternetController: Found created JRE, setting next controller to be connect roborio
+17/Jan/2016 21:49:13,327- AbstractController: Moving to controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:49:13,327- ControllerFactory: Loading controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 21:49:18,855- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 21:49:18,857- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 21:49:22,320- ConnectRoboRioController: roborio-246-frc.local is reachable
+17/Jan/2016 21:49:22,323- ConnectRoboRioController: Found mDNS connection
+17/Jan/2016 21:49:22,323- AbstractController: Moving to controller DEPLOY_CONTROLLER
+17/Jan/2016 21:49:22,324- ControllerFactory: Loading controller DEPLOY_CONTROLLER
+17/Jan/2016 21:49:24,290- DeployController: Size command is C0644 15273688 JRE.tar.gz
+
+17/Jan/2016 21:49:24,339- DeployController: Return code is 0
+17/Jan/2016 21:49:25,833- DeployController: Return code is 0
+17/Jan/2016 21:49:25,835- DeployController: Attempting to remove old JRE
+17/Jan/2016 21:49:25,837- DeployController: Running command rm -r /usr/local/frc/JRE
+17/Jan/2016 21:49:25,968- DeployController: Error with command rm -r /usr/local/frc/JRE
+17/Jan/2016 21:49:25,968- DeployController: No JRE folder removed
+17/Jan/2016 21:49:25,969- DeployController: Extracting the JRE
+17/Jan/2016 21:49:25,970- DeployController: Running command tar -xzf /home/admin/JRE.tar.gz -C /home/admin/
+17/Jan/2016 21:49:27,174- DeployController: Extracted the JRE
+17/Jan/2016 21:49:27,175- DeployController: Moving the JRE
+17/Jan/2016 21:49:27,177- DeployController: Running command mv /home/admin/JRE /usr/local/frc
+17/Jan/2016 21:49:27,279- DeployController: Moved the JRE
+17/Jan/2016 21:49:27,279- DeployController: Setting permissions
+17/Jan/2016 21:49:27,281- DeployController: Running command chmod +x /usr/local/frc/JRE/bin/*
+17/Jan/2016 21:49:27,383- DeployController: Set permissions
+17/Jan/2016 21:49:27,383- DeployController: Cleaning up
+17/Jan/2016 21:49:27,384- DeployController: Running command rm /home/admin/JRE.tar.gz
+17/Jan/2016 21:49:28,289- DeployController: Cleaned up
+17/Jan/2016 21:49:28,295- AbstractController: Moving to controller SUCCESS_CONTROLLER
+17/Jan/2016 21:49:28,295- ControllerFactory: Loading controller SUCCESS_CONTROLLER
+17/Jan/2016 21:49:35,191- SuccessController: Cleaning up installer files
+17/Jan/2016 21:49:35,192- SuccessController: Error when deleting files
+java.lang.NullPointerException
+	at java.io.File.<init>(Unknown Source) ~[?:1.8.0_60]
+	at edu.wpi.first.wpilib.javainstaller.controllers.SuccessController.cleanupLocalFiles(SuccessController.java:60) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.SuccessController.handleFinish(SuccessController.java:44) ~[java-installer.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_60]
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source) ~[?:1.8.0_60]
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_60]
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source) ~[?:1.8.0_60]
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Node.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.control.Button.fire(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_60]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$355(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$149(Unknown Source) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+17/Jan/2016 21:49:35,259- SuccessController: Finished!
+17/Jan/2016 22:11:17,925- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 22:11:19,638- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 22:11:19,638- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 22:11:19,862- MainApp: Computed hash is AE7E60288C11BC7704F7879AD1FED8F7, official hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 22:11:19,862- InternetController: Found created JRE, setting next controller to be connect roborio
+17/Jan/2016 22:11:20,339- AbstractController: Moving to controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 22:11:20,339- ControllerFactory: Loading controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 22:11:24,248- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 22:11:24,249- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 22:11:32,123- ConnectRoboRioController: roborio-246-frc.local is reachable
+17/Jan/2016 22:11:32,124- ConnectRoboRioController: Found mDNS connection
+17/Jan/2016 22:11:32,124- AbstractController: Moving to controller DEPLOY_CONTROLLER
+17/Jan/2016 22:11:32,124- ControllerFactory: Loading controller DEPLOY_CONTROLLER
+17/Jan/2016 22:11:33,322- DeployController: Size command is C0644 15273688 JRE.tar.gz
+
+17/Jan/2016 22:11:33,370- DeployController: Return code is 0
+17/Jan/2016 22:11:34,569- DeployController: Return code is 0
+17/Jan/2016 22:11:34,572- DeployController: Attempting to remove old JRE
+17/Jan/2016 22:11:34,572- DeployController: Running command rm -r /usr/local/frc/JRE
+17/Jan/2016 22:11:34,716- DeployController: Error with command rm -r /usr/local/frc/JRE
+17/Jan/2016 22:11:34,716- DeployController: No JRE folder removed
+17/Jan/2016 22:11:34,716- DeployController: Extracting the JRE
+17/Jan/2016 22:11:34,716- DeployController: Running command tar -xzf /home/admin/JRE.tar.gz -C /home/admin/
+17/Jan/2016 22:11:35,820- DeployController: Extracted the JRE
+17/Jan/2016 22:11:35,820- DeployController: Moving the JRE
+17/Jan/2016 22:11:35,820- DeployController: Running command mv /home/admin/JRE /usr/local/frc
+17/Jan/2016 22:11:35,922- DeployController: Moved the JRE
+17/Jan/2016 22:11:35,922- DeployController: Setting permissions
+17/Jan/2016 22:11:35,922- DeployController: Running command chmod +x /usr/local/frc/JRE/bin/*
+17/Jan/2016 22:11:36,023- DeployController: Set permissions
+17/Jan/2016 22:11:36,023- DeployController: Cleaning up
+17/Jan/2016 22:11:36,023- DeployController: Running command rm /home/admin/JRE.tar.gz
+17/Jan/2016 22:11:37,031- DeployController: Cleaned up
+17/Jan/2016 22:11:37,031- AbstractController: Moving to controller SUCCESS_CONTROLLER
+17/Jan/2016 22:11:37,031- ControllerFactory: Loading controller SUCCESS_CONTROLLER
+17/Jan/2016 22:11:42,478- SuccessController: Cleaning up installer files
+17/Jan/2016 22:11:42,478- SuccessController: Error when deleting files
+java.lang.NullPointerException
+	at java.io.File.<init>(Unknown Source) ~[?:1.8.0_60]
+	at edu.wpi.first.wpilib.javainstaller.controllers.SuccessController.cleanupLocalFiles(SuccessController.java:60) ~[java-installer.jar:?]
+	at edu.wpi.first.wpilib.javainstaller.controllers.SuccessController.handleFinish(SuccessController.java:44) ~[java-installer.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_60]
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source) ~[?:1.8.0_60]
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_60]
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source) ~[?:1.8.0_60]
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Node.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.control.Button.fire(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.event.Event.fireEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.process(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$MouseHandler.access$1500(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Scene.impl_processMouseEvent(Unknown Source) ~[jfxrt.jar:?]
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source) ~[jfxrt.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_60]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$355(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.handleMouseEvent(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.View.notifyMouse(Unknown Source) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$null$149(Unknown Source) ~[jfxrt.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+17/Jan/2016 22:11:42,484- SuccessController: Finished!
+17/Jan/2016 22:14:24,546- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 22:14:27,176- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 22:14:27,176- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 22:14:27,383- MainApp: Computed hash is AE7E60288C11BC7704F7879AD1FED8F7, official hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 22:14:27,383- InternetController: Found created JRE, setting next controller to be connect roborio
+17/Jan/2016 22:14:32,534- InternetController: Starting internet check
+17/Jan/2016 22:14:33,140- InternetController: Internet check successful, moving to download
+17/Jan/2016 22:14:33,142- AbstractController: Moving to controller DOWNLOAD_CONTROLLER
+17/Jan/2016 22:14:33,143- ControllerFactory: Loading controller DOWNLOAD_CONTROLLER
+17/Jan/2016 22:14:33,395- DownloadController: Loading download page page
+17/Jan/2016 22:14:33,395- DownloadController: Loading download page page
+17/Jan/2016 22:14:35,321- DownloadController: Loading download page page
+17/Jan/2016 22:14:44,262- DownloadController: Loading unknown page
+17/Jan/2016 22:14:44,263- DownloadController: Loading unknown page
+17/Jan/2016 22:14:45,469- DownloadController: Loading unknown page
+17/Jan/2016 22:14:45,469- DownloadController: Loading unknown page
+17/Jan/2016 22:14:45,469- DownloadController: Loading unknown page
+17/Jan/2016 22:14:45,638- DownloadController: Loading unknown page
+17/Jan/2016 22:14:45,654- DownloadController: Loading login page
+17/Jan/2016 22:14:45,654- DownloadController: Loading login page
+17/Jan/2016 22:14:46,666- DownloadController: Loading login page
+17/Jan/2016 22:14:55,605- DownloadController: Loading download page page
+17/Jan/2016 22:14:55,605- DownloadController: Loading download page page
+17/Jan/2016 22:14:56,381- DownloadController: Loading download page page
+17/Jan/2016 22:14:58,539- DownloadController: Loading unknown page
+17/Jan/2016 22:14:58,539- DownloadController: Loading unknown page
+17/Jan/2016 22:14:58,543- DownloadController: Signed in and have the .tar.gz link.
+17/Jan/2016 22:14:58,543- AbstractController: Moving to controller DOWNLOAD_PROGRESS_CONTROLLER
+17/Jan/2016 22:14:58,543- ControllerFactory: Loading controller DOWNLOAD_PROGRESS_CONTROLLER
+17/Jan/2016 22:14:58,634- DownloadProgressController: Initial url is http://download.oracle.com/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz
+17/Jan/2016 22:14:58,707- DownloadController: Signed in and have the .tar.gz link.
+17/Jan/2016 22:14:58,707- AbstractController: Moving to controller DOWNLOAD_PROGRESS_CONTROLLER
+17/Jan/2016 22:14:58,707- ControllerFactory: Loading controller DOWNLOAD_PROGRESS_CONTROLLER
+17/Jan/2016 22:14:58,714- DownloadProgressController: Redirecting to https://edelivery.oracle.com/akam/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz
+17/Jan/2016 22:14:58,750- DownloadProgressController: Initial url is https://edelivery.oracle.com/akam/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz
+17/Jan/2016 22:14:59,106- DownloadProgressController: Final url is https://login.oracle.com/pls/orasso/orasso.wwsso_app_admin.ls_login?Site2pstoreToken=v1.2~CA55CD32~B2D395ABD4DB52A52340BA005AAD1BAB19F349C51F642BBC7654BF022562BB971C0E36E32CC06604A666D13E58011408C3E46B94DBF277DA8326BCD265258452DFF40FD0D3AEBD5F5C428C8FD11CC8440B37D4465BB7ED7CE642E62B65F03864150EBBB9F543836197D734106BAA2DFBBA1B904DF394375978040D2D77B0BB59124CD407EDB8FF11FCE9D79B632C6E0CDBE581C48BFC1EF5089130A5738DF07518BC2C3CDBB30DCF90F6EF792602BFE5A015E9B23A1629CB193D462193988703518D381798976C34276E7ACADBAF927DA0A3AB33DF3BC27199F47BBF7E4559AC41273F776D56CD83D9CF3DF6DD0CCE05AED0572FE5DE97326779D8BC3068B411558B067897310332594A25DC592374C2CFC602FFDE0143A651C003A8DFA02036
+17/Jan/2016 22:14:59,190- DownloadProgressController: Starting JRE Creator download. File size is 2051 bytes
+17/Jan/2016 22:14:59,201- DownloadProgressController: Downloaded JRE
+17/Jan/2016 22:14:59,232- DownloadProgressController: Final url is https://login.oracle.com/pls/orasso/orasso.wwsso_app_admin.ls_login?Site2pstoreToken=v1.2~CA55CD32~0AF95A10B7F885982515EEC50F641D097BFFAE75EBCB24C4D15554E5A0E941D98ECAF2F2C0643CA19EC389C2C6BE1A6C66B2F011FAFDEEBA2DD0F44B2894B381425E8E66964969E1EDA892F5B9D62B8E5B5F71A59273F4F1CBDB1CC094CEBF209DB4F08AABDFD0A6469DC637CA1D69892712EFE67CE3DB450142FD596701FCB046DA69B9140CDA7E01BEEECEF86ABB7BFF875B6A6B83717FAE8813BDAF413D2C72E30DDDC1B2A5A7B854F55E0962BB303EC3A00F08025452693B46D33F4DC85B5BEEBBD19EA1EDE5A0B36234A667779878F659CD1AF613793A412465E128BF1F2AA794066320F7BF66EA922C17145FD9F67631D95795B28B45523B7D5A4878D5905E8AB2CF774F4648B520D5CD3C5E59BE2F57525AF730DD274DFA99DEB30669
+17/Jan/2016 22:14:59,235- DownloadController: Loading unknown page
+17/Jan/2016 22:14:59,235- DownloadProgressController: Starting JRE Creator download. File size is 2051 bytes
+17/Jan/2016 22:14:59,236- DownloadProgressController: Downloaded JRE
+17/Jan/2016 22:14:59,237- AbstractController: Moving to controller UNTAR_CONTROLLER
+17/Jan/2016 22:14:59,237- ControllerFactory: Loading controller UNTAR_CONTROLLER
+17/Jan/2016 22:14:59,290- UntarController: Starting decompress of file C:\Users\asus1\wpilib\tools\.\ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz to C:\Users\asus1\wpilib\tools\.
+17/Jan/2016 22:14:59,301- UntarController: Exception when untarring the JRE
+java.util.zip.ZipException: Not in GZIP format
+	at java.util.zip.GZIPInputStream.readHeader(Unknown Source) ~[?:1.8.0_60]
+	at java.util.zip.GZIPInputStream.<init>(Unknown Source) ~[?:1.8.0_60]
+	at java.util.zip.GZIPInputStream.<init>(Unknown Source) ~[?:1.8.0_60]
+	at edu.wpi.first.wpilib.javainstaller.controllers.UntarController.untarJRECreator(UntarController.java:62) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+17/Jan/2016 22:14:59,500- AbstractController: Moving to controller UNTAR_CONTROLLER
+17/Jan/2016 22:14:59,500- ControllerFactory: Loading controller UNTAR_CONTROLLER
+17/Jan/2016 22:14:59,510- UntarController: Starting decompress of file C:\Users\asus1\wpilib\tools\.\ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz to C:\Users\asus1\wpilib\tools\.
+17/Jan/2016 22:14:59,511- UntarController: Exception when untarring the JRE
+java.util.zip.ZipException: Not in GZIP format
+	at java.util.zip.GZIPInputStream.readHeader(Unknown Source) ~[?:1.8.0_60]
+	at java.util.zip.GZIPInputStream.<init>(Unknown Source) ~[?:1.8.0_60]
+	at java.util.zip.GZIPInputStream.<init>(Unknown Source) ~[?:1.8.0_60]
+	at edu.wpi.first.wpilib.javainstaller.controllers.UntarController.untarJRECreator(UntarController.java:62) ~[java-installer.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_60]
+17/Jan/2016 22:14:59,532- DownloadController: Loading login page
+17/Jan/2016 22:14:59,532- DownloadController: Loading login page
+17/Jan/2016 22:14:59,683- DownloadController: Loading login page
+17/Jan/2016 22:15:03,837- ErrorController: Exiting from error screen
+17/Jan/2016 22:15:06,360- ControllerFactory: Loading controller WELCOME_CONTROLLER
+17/Jan/2016 22:15:08,141- AbstractController: Moving to controller INTERNET_CONTROLLER
+17/Jan/2016 22:15:08,141- ControllerFactory: Loading controller INTERNET_CONTROLLER
+17/Jan/2016 22:15:08,450- MainApp: Computed hash is AE7E60288C11BC7704F7879AD1FED8F7, official hash is AE7E60288C11BC7704F7879AD1FED8F7
+17/Jan/2016 22:15:08,450- InternetController: Found created JRE, setting next controller to be connect roborio
+17/Jan/2016 22:15:09,921- InternetController: Starting internet check
+17/Jan/2016 22:15:10,478- InternetController: Internet check successful, moving to download
+17/Jan/2016 22:15:10,480- AbstractController: Moving to controller DOWNLOAD_CONTROLLER
+17/Jan/2016 22:15:10,480- ControllerFactory: Loading controller DOWNLOAD_CONTROLLER
+17/Jan/2016 22:15:10,761- DownloadController: Loading download page page
+17/Jan/2016 22:15:10,762- DownloadController: Loading download page page
+17/Jan/2016 22:15:12,969- DownloadController: Loading download page page
+17/Jan/2016 22:15:18,505- DownloadController: Loading unknown page
+17/Jan/2016 22:15:18,506- DownloadController: Loading unknown page
+17/Jan/2016 22:15:21,923- DownloadController: Loading unknown page
+17/Jan/2016 22:15:21,923- DownloadController: Loading unknown page
+17/Jan/2016 22:15:21,923- DownloadController: Loading unknown page
+17/Jan/2016 22:15:22,686- DownloadController: Loading unknown page
+17/Jan/2016 22:15:22,707- DownloadController: Loading login page
+17/Jan/2016 22:15:22,707- DownloadController: Loading login page
+17/Jan/2016 22:15:25,156- DownloadController: Loading login page
+17/Jan/2016 22:15:35,126- DownloadController: Loading unknown page
+17/Jan/2016 22:15:35,127- DownloadController: Loading unknown page
+17/Jan/2016 22:15:35,663- DownloadController: Signed in and have the .tar.gz link.
+17/Jan/2016 22:15:35,664- AbstractController: Moving to controller DOWNLOAD_PROGRESS_CONTROLLER
+17/Jan/2016 22:15:35,664- ControllerFactory: Loading controller DOWNLOAD_PROGRESS_CONTROLLER
+17/Jan/2016 22:15:35,743- DownloadProgressController: Initial url is https://edelivery.oracle.com/akam/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz
+17/Jan/2016 22:15:35,852- DownloadProgressController: Redirecting to http://download.oracle.com/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz?AuthParam=1453087066_9867dfe119cc6bcfd4ed425da861ba53
+17/Jan/2016 22:15:36,596- DownloadController: Loading unknown page
+17/Jan/2016 22:15:36,739- DownloadProgressController: Final url is http://download.oracle.com/otn/java/ejdk/8u6-b23/ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz?AuthParam=1453087066_9867dfe119cc6bcfd4ed425da861ba53
+17/Jan/2016 22:15:36,742- DownloadProgressController: Starting JRE Creator download. File size is 121568917 bytes
+17/Jan/2016 22:18:02,822- DownloadProgressController: Downloaded JRE
+17/Jan/2016 22:18:02,828- AbstractController: Moving to controller UNTAR_CONTROLLER
+17/Jan/2016 22:18:02,828- ControllerFactory: Loading controller UNTAR_CONTROLLER
+17/Jan/2016 22:18:02,938- UntarController: Starting decompress of file C:\Users\asus1\wpilib\tools\.\ejdk-8u6-fcs-b23-linux-arm-vfp-sflt-12_jun_2014.tar.gz to C:\Users\asus1\wpilib\tools\.
+17/Jan/2016 22:18:05,777- AbstractController: Moving to controller CREATE_JRE_CONTROLLER
+17/Jan/2016 22:18:05,777- ControllerFactory: Loading controller CREATE_JRE_CONTROLLER
+17/Jan/2016 22:18:05,791- CreateJreController: Staring JRE Creation
+17/Jan/2016 22:18:05,791- CreateJreController: Creator location: C:\Users\asus1\wpilib\tools\.\ejdk1.8.0_06\lib\JRECreate.jar
+17/Jan/2016 22:18:05,791- CreateJreController: Command: [java, -jar, C:\Users\asus1\wpilib\tools\.\ejdk1.8.0_06\lib\JRECreate.jar, --dest, JRE, --profile, compact2, --vm, client, --keep-debug-info, --debug]
+17/Jan/2016 22:18:05,791- CreateJreController: EJDK_HOME: C:\Users\asus1\wpilib\tools\.\ejdk1.8.0_06
+17/Jan/2016 22:18:07,732- CreateJreController: Successfully Created JRE!
+17/Jan/2016 22:18:07,746- AbstractController: Moving to controller TAR_JRE_CONTROLLER
+17/Jan/2016 22:18:07,746- ControllerFactory: Loading controller TAR_JRE_CONTROLLER
+17/Jan/2016 22:18:07,799- TarJREController: Removed the old tgz file
+17/Jan/2016 22:18:07,805- TarJREController: Removed the old md5 file
+17/Jan/2016 22:18:07,805- TarJREController: Starting zip
+17/Jan/2016 22:18:09,887- TarJREController: Finished zip, starting md5 hash
+17/Jan/2016 22:18:09,991- TarJREController: Finished md5 hash, hash is CAB34C67E2E5FD54DA9D26F11A7FC8C0
+17/Jan/2016 22:18:09,996- AbstractController: Moving to controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 22:18:09,996- ControllerFactory: Loading controller CONNECT_ROBORIO_CONTROLLER
+17/Jan/2016 22:18:25,075- ConnectRoboRioController: Connecting to roborio-246-frc.local
+17/Jan/2016 22:18:25,078- ConnectRoboRioController: Checking for mDNS connection to the roboRio
+17/Jan/2016 22:18:37,565- ConnectRoboRioController: roborio-246-frc.local is reachable
+17/Jan/2016 22:18:37,567- ConnectRoboRioController: Found mDNS connection
+17/Jan/2016 22:18:37,567- AbstractController: Moving to controller DEPLOY_CONTROLLER
+17/Jan/2016 22:18:37,568- ControllerFactory: Loading controller DEPLOY_CONTROLLER
+17/Jan/2016 22:18:38,352- DeployController: Size command is C0644 15273713 JRE.tar.gz
+
+17/Jan/2016 22:18:38,428- DeployController: Return code is 0
+17/Jan/2016 22:18:40,114- DeployController: Return code is 0
+17/Jan/2016 22:18:40,120- DeployController: Attempting to remove old JRE
+17/Jan/2016 22:18:40,122- DeployController: Running command rm -r /usr/local/frc/JRE
+17/Jan/2016 22:18:40,402- DeployController: Removed old JRE
+17/Jan/2016 22:18:40,402- DeployController: Extracting the JRE
+17/Jan/2016 22:18:40,404- DeployController: Running command tar -xzf /home/admin/JRE.tar.gz -C /home/admin/
+17/Jan/2016 22:18:42,010- DeployController: Extracted the JRE
+17/Jan/2016 22:18:42,010- DeployController: Moving the JRE
+17/Jan/2016 22:18:42,011- DeployController: Running command mv /home/admin/JRE /usr/local/frc
+17/Jan/2016 22:18:42,114- DeployController: Moved the JRE
+17/Jan/2016 22:18:42,114- DeployController: Setting permissions
+17/Jan/2016 22:18:42,115- DeployController: Running command chmod +x /usr/local/frc/JRE/bin/*
+17/Jan/2016 22:18:42,218- DeployController: Set permissions
+17/Jan/2016 22:18:42,218- DeployController: Cleaning up
+17/Jan/2016 22:18:42,219- DeployController: Running command rm /home/admin/JRE.tar.gz
+17/Jan/2016 22:18:43,829- DeployController: Cleaned up
+17/Jan/2016 22:18:43,847- AbstractController: Moving to controller SUCCESS_CONTROLLER
+17/Jan/2016 22:18:43,847- ControllerFactory: Loading controller SUCCESS_CONTROLLER
+17/Jan/2016 22:18:51,036- SuccessController: Cleaning up installer files
+17/Jan/2016 22:18:52,066- SuccessController: Finished!
