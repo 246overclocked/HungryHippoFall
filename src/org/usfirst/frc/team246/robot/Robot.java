@@ -6,7 +6,7 @@ import org.usfirst.frc.team246.robot.overclockedScripting.CallReference;
 import org.usfirst.frc.team246.robot.overclockedScripting.MethodHolder;
 import org.usfirst.frc.team246.robot.overclockedScripting.PythonComms;
 
-import edu.wpi.first.wpilibj.CANTalon.TalonControlMode;
+import com.ctre.CANTalon.TalonControlMode;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;

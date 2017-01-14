@@ -1,6 +1,6 @@
 package org.usfirst.frc.team246.robot.overclockedLibraries;
 
-import edu.wpi.first.wpilibj.CANTalon;
+import com.ctre.CANTalon;
 
 /** 246 wrapper for the CANTalon class */
 public class CANTalon246 extends CANTalon {
