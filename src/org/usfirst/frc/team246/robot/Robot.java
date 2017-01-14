@@ -21,7 +21,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 public class Robot extends IterativeRobot {
 	public static OI oi;
 	
-	
+	CANTalon246 testMotor1;
 	
 	// Declare subsystem variables here
 
@@ -36,7 +36,7 @@ public class Robot extends IterativeRobot {
 
 		// Instantiate subsytem objects here
 		
-		CANTalon246 testMotor1 = CANTalon246.init(2, 10);
+		testMotor1 = CANTalon246.init(2, 10);
 		CANTalon246 testMotor2 = CANTalon246.init(3, 10);
 		CANTalon246 testMotor3 = CANTalon246.init(4, 10);
 		
@@ -110,6 +110,7 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
+    	testMotor1.set(1);
         Scheduler.getInstance().run();
     }
     
