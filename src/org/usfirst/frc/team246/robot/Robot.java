@@ -2,12 +2,15 @@
 package org.usfirst.frc.team246.robot;
 
 import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
+import org.usfirst.frc.team246.robot.overclockedLibraries.SampleCommand;
 import org.usfirst.frc.team246.robot.overclockedScripting.CallReference;
 import org.usfirst.frc.team246.robot.overclockedScripting.MethodHolder;
 import org.usfirst.frc.team246.robot.overclockedScripting.PythonComms;
 
 import com.ctre.CANTalon.TalonControlMode;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
@@ -20,8 +23,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  */
 public class Robot extends IterativeRobot {
 	public static OI oi;
-	
-	CANTalon246 testMotor1;
+
 	
 	// Declare subsystem variables here
 
@@ -36,9 +38,9 @@ public class Robot extends IterativeRobot {
 
 		// Instantiate subsytem objects here
 		
-		testMotor1 = CANTalon246.init(2, 10);
-		CANTalon246 testMotor2 = CANTalon246.init(3, 10);
-		CANTalon246 testMotor3 = CANTalon246.init(4, 10);
+		CANTalon246 testMotor1 = RobotMap.testMotor1;
+		CANTalon246 testMotor2 = RobotMap.testMotor2;
+		CANTalon246 testMotor3 = RobotMap.testMotor3;
 		
 		testMotor1.changeControlMode(TalonControlMode.PercentVbus);
 		testMotor2.changeControlMode(TalonControlMode.PercentVbus);
@@ -48,27 +50,36 @@ public class Robot extends IterativeRobot {
 		CallReference.addMotor("testMotor2", testMotor2);
 		CallReference.addMotor("testMotor3", testMotor3);
 		
-		CallReference.addMethod("stopAllMotors", new MethodHolder() {
+		CallReference.addMethod("stopAll", new MethodHolder() {
 			
 			@Override
 			public String requiredParams() {
-				return null;
+				return "String, double";
 			}
 			
 			@Override
 			public void callMethod(String[] args) throws ArrayIndexOutOfBoundsException, NumberFormatException {
-				stopAllMotors();
+				stopAllMotors(args[0], Double.parseDouble(args[1]));
 			}
 		});
 		
+		Command testCommand = new SampleCommand(); 
+		
+		CallReference.addCommand("testCommand", testCommand);
+		
+		
+		
 		PythonComms comms = new PythonComms();
 		comms.initialize(8080);
+		
     }
     
-    private void stopAllMotors() {
+    private void stopAllMotors(String s, double d) {
     	CallReference.motors.get("testMotor1").set(0);
     	CallReference.motors.get("testMotor2").set(0);
     	CallReference.motors.get("testMotor3").set(0);
+    	
+    	System.out.println("Received parameter string: " + s + ", doube: " + d);
     }
 	
 	/**
@@ -110,7 +121,6 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-    	testMotor1.set(1);
         Scheduler.getInstance().run();
     }
     

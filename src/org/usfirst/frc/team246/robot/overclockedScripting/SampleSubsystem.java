@@ -2,7 +2,9 @@ package org.usfirst.frc.team246.robot.overclockedScripting;
 
 import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
 
-public class SampleSubsystem {
+import edu.wpi.first.wpilibj.command.Subsystem;
+
+public class SampleSubsystem extends Subsystem{
 	
 	CANTalon246 sampleMotor = CANTalon246.init(0, 0);
 
@@ -29,5 +31,11 @@ public class SampleSubsystem {
 	
 	private void exampleSubsystemMethod(double abc, CANTalon246 motor) {
 		System.out.println("received " + abc + motor.getScaledSpeed());
+	}
+
+	@Override
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		
 	}
 }

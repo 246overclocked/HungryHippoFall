@@ -67,23 +67,47 @@ public class PythonComms implements Runnable {
 				while(true) {
 					String msg = inFromClient.readLine();
 					System.out.println("Msg from client was: " + msg);
-					
+					 
 					//parse, handle, then send back resulting data
-					outToClient.println(call(parse(msg)));
+					String[] args = parse(msg);
+					
+					//user sent KeyboardInterrupt (Cntrl-C) or "exit"
+					//close and reopen socket
+					if(args == null) {
+						try {
+							socket.close();
+						} catch (IOException e) {
+							System.out.println("Error closing socket");
+							e.printStackTrace();
+						}
+						
+						isConnected = false;
+						break;
+					}
+					
+					String out = call(parse(msg));
+					outToClient.println(out);
+					System.out.println("sent:" + out);
+					
 				}
 			
-			} catch (IOException e) {}
-			
+			} catch (IOException e) {}	
 		}
 	}
 	
 	public String[] parse(String msg) {
-		
-		String[] args = new String[msg.split(":").length];
-		args = msg.replaceAll("\\s+", "").split(":");
-		System.out.println("Arguments: " + Arrays.toString(args));
-		
-		return args;
+		if(msg == null) {
+			return null;
+		} else if(msg.equals("exit")) {
+			return null;
+		} else {
+			String[] args = new String[msg.split(":").length];
+			//remove whitespace
+			args = msg.replaceAll("\\s+", "").split(":");
+			System.out.println("Arguments: " + Arrays.toString(args));
+			
+			return args;
+		}
 	}
 	
 	public String call(String[] args) {
