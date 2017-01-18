@@ -54,12 +54,12 @@ public class Robot extends IterativeRobot {
 			
 			@Override
 			public String requiredParams() {
-				return "String, double";
+				return "None";
 			}
 			
 			@Override
 			public void callMethod(String[] args) throws ArrayIndexOutOfBoundsException, NumberFormatException {
-				stopAllMotors(args[0], Double.parseDouble(args[1]));
+				stopAllMotors();
 			}
 		});
 		
@@ -74,12 +74,10 @@ public class Robot extends IterativeRobot {
 		
     }
     
-    private void stopAllMotors(String s, double d) {
+    private void stopAllMotors() {
     	CallReference.motors.get("testMotor1").set(0);
     	CallReference.motors.get("testMotor2").set(0);
     	CallReference.motors.get("testMotor3").set(0);
-    	
-    	System.out.println("Received parameter string: " + s + ", doube: " + d);
     }
 	
 	/**

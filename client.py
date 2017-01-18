@@ -1,4 +1,4 @@
-import socket, sys
+import socket, sys, readline
 
 HOST = "roboRIO-246-FRC.local"
 PORT = 8080

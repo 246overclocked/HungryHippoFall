@@ -11,7 +11,7 @@ public class SampleSubsystem extends Subsystem{
 	public SampleSubsystem() {
 		
 		//add a sample method to the call reference
-		CallReference.addMethod("sampleSubsystemMethod", new MethodHolder() {
+		CallReference.addMethod("dummySubsystemMethod", new MethodHolder() {
 			
 			@Override
 			public void callMethod(String[] params) throws ArrayIndexOutOfBoundsException, 
@@ -26,7 +26,7 @@ public class SampleSubsystem extends Subsystem{
 		});
 		
 		//add a sample motor to the call reference
-		CallReference.addMotor("sampleMotor", sampleMotor);
+		CallReference.addMotor("dummyMotor", sampleMotor);
 	}
 	
 	private void exampleSubsystemMethod(double abc, CANTalon246 motor) {

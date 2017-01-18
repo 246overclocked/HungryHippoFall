@@ -24,7 +24,8 @@ public abstract class MethodHolder {
 	 * 
 	 * When returning the string with the parameter types, return in the format
 	 * "{Type}, {Type}, ..." where {Type} is the primitive or object name as seen
-	 * in Java, ex. "double, CANTalon246, String" 
+	 * in Java, ex. "double, CANTalon246, String". If no parameters are required,
+	 * return "None".
 	 *
 	 * @return the string with the required parameters for the wrapped methods.
 	 */
