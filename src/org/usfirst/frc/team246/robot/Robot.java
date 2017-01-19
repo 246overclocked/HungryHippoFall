@@ -4,8 +4,8 @@ package org.usfirst.frc.team246.robot;
 import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
 import org.usfirst.frc.team246.robot.overclockedLibraries.SampleCommand;
 import org.usfirst.frc.team246.robot.overclockedScripting.CallReference;
-import org.usfirst.frc.team246.robot.overclockedScripting.MethodHolder;
-import org.usfirst.frc.team246.robot.overclockedScripting.PythonComms;
+import org.usfirst.frc.team246.robot.overclockedScripting.RoboScripting;
+import org.usfirst.frc.team246.robot.overclockedScripting.RoboScripting.MethodHolder;
 
 import com.ctre.CANTalon.TalonControlMode;
 
@@ -46,11 +46,11 @@ public class Robot extends IterativeRobot {
 		testMotor2.changeControlMode(TalonControlMode.PercentVbus);
 		testMotor3.changeControlMode(TalonControlMode.PercentVbus);
 		
-		CallReference.addMotor("testMotor1", testMotor1);
-		CallReference.addMotor("testMotor2", testMotor2);
-		CallReference.addMotor("testMotor3", testMotor3);
+		RoboScripting.addMotor("testMotor1", testMotor1);
+		RoboScripting.addMotor("testMotor2", testMotor2);
+		RoboScripting.addMotor("testMotor3", testMotor3);
 		
-		CallReference.addMethod("stopAll", new MethodHolder() {
+		RoboScripting.addMethod("stopAll", new MethodHolder() {
 			
 			@Override
 			public String requiredParams() {
@@ -65,11 +65,11 @@ public class Robot extends IterativeRobot {
 		
 		Command testCommand = new SampleCommand(); 
 		
-		CallReference.addCommand("testCommand", testCommand);
+		RoboScripting.addCommand("testCommand", testCommand);
 		
 		
 		
-		PythonComms comms = new PythonComms();
+		RoboScripting comms = new RoboScripting();
 		comms.initialize(8080);
 		
     }

@@ -12,9 +12,15 @@ while(True):
     sock.sendall(msg + "\n")
     
     if(msg == "exit"):
+        print "Shutting down..."
         sys.exit()
 
-    data = sock.recv(1024)
+    print "Waiting for data from roboRIO..."
+    try:
+        data = sock.recv(2048)
+    except socket.timeout:
+        print "Failed to receive data from roboRIO"
+        #continue
     print data
 
 

@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
 import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246.SensorType;
+import org.usfirst.frc.team246.robot.overclockedScripting.RoboScripting.MethodHolder;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -398,11 +399,15 @@ public class CallReference {
 		
 		switch(findOtherOperation(args)) {
 			case LIST: {
-				out += "Methods:\n" + listRegistered(HelpType.METHODS) + "===============\nMotors:\n" + listRegistered(HelpType.MOTORS);
+				out += "Methods:\n" + listRegistered(HelpType.METHODS) + 
+						"===============\nMotors:\n" + listRegistered(HelpType.MOTORS) +
+						"===============\nCommands:\n" + listRegistered(HelpType.COMMANDS);
 				break;
 			}
 			case HELP: {
-				out += listPossibleCommands(HelpType.METHODS) + "\n\n" + listPossibleCommands(HelpType.MOTORS);
+				out += listPossibleCommands(HelpType.METHODS) + 
+						"\n\n" + listPossibleCommands(HelpType.MOTORS) +
+						"\n\n" + listPossibleCommands(HelpType.COMMANDS);
 				break;
 			}
 			case INVALID: {

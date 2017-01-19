@@ -1,6 +1,7 @@
 package org.usfirst.frc.team246.robot.overclockedScripting;
 
 import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
+import org.usfirst.frc.team246.robot.overclockedScripting.RoboScripting.MethodHolder;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
