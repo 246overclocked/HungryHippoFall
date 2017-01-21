@@ -54,6 +54,64 @@ Each "target" is a subcommand you can run. For example `ant deploy` deploys the 
 
   1. You can select configurations you've run previously by clicking on the drop-down list next to the deploy button with a red tool chest under it (located just to the right of the usual deploy button) or going back the the 'External Tools Configurations' menu mentioned above. 
 
+##Using RoboScripting
+The RoboScripting library is a tool used to test and debug registered motors, methods, and commands on the robot without having to map these to any joystick controls. Motor objects (CANTalon246), method references, and command objects (Command) are stored in the static `CallReference.java`. `RoboScripting.java` acts as the access class to receive, parse, and execute commands from the python client, as well as to add motor, method, and command references to `CallReference.java`.
+
+###Adding a reference for RoboScripting
+
+**Motors:** `RoboScripting.addMotor(String motorName, CANTalon246 motorReference)` is the preferred method of adding a motor to RoboScripting. Ex. `RoboScripting.addMotor("testMotor1", testMotor1)`.
+
+**Methods:** "References" to methods are stored by means of a helper inline class. `RoboScripting.addMethod(String methodName, RoboScripting.MethodHolder methodReference)` should be called to add a method to RoboScripting. The class **RoboScripting.MethodHolder** requires the user to complete two methods `requiredParams` and `callMethod`.
+  
+  **String requiredParams()**: Returns a String meant to help the user determine which parameters the method needs. The String should
+  look like "{Type}, {Type}, ..." where {Type} is the primitive or object name as seen in Java, ex. "double, CANTalon246,
+  String". If no parameters are required, return "None". Ex. `return "double, String, CANTalon246`.
+  
+  **void callMethod(String[] args)**: Calls the method with any parameters. All user specified parameters will be passed to
+  this method as part of args. This method should then handle any necessary parameters and call the wanted method. An example
+  implementation is below:
+  
+  ```
+  RoboScripting.addMethod("stopAll", new MethodHolder() {
+			
+			@Override
+			public String requiredParams() {
+				return "None";
+			}
+			
+			@Override
+			public void callMethod(String[] args) throws ArrayIndexOutOfBoundsException, NumberFormatException {
+				stopAllMotors();
+			}
+		});
+    
+    private void stopAllMotors() {
+      //stops all motors
+    }
+```
+    
+**Commands:** `RoboScripting.addCommand(String commandName, Command commandReference)` is the preferred method of adding a motor to RoboScripting. Ex. `RoboScripting.addCommand("testCommand", testCommand)`.
+
+###Running the client and calling commands
+
+1. Use ant to deploy the latest version to the roboRIO.
+2. Enable the robot from the FRC driverstation.
+3. Make sure the client computer is on the 246 network, then run the file `client.py`. I.e. `python client.py` from terminal. The client should automatically connect successfully and display a command prompt `>`.
+4. You are now able to freely use commands. If you forget a command, use `help` for a list of all possible commands or `motors`, `methods`, `commands` for a list of possible command specific to a category. Typing `list` will list all registered items in RoboScripting, or calling `{Category}:list`, i.e. `motors:list`, will list all registered items for the category. Item and category names are case-sensitive, ex. `testMotor1` or `commands`, everything else is not. Sample commands:
+  
+  `motors:testMotor1:set_power:0.1`- Sets the raw power of testMotor1 to 0.1
+  
+  `methods:runAllMotors`- Runs the method `runAllMotors`
+  
+  `commands:testCommand:run`- Runs the command `testCommand`
+  
+  `commands:testCommand:stop`- Stops running the command `testCommand`
+  
+  `methods:printTheseThings:overclocked:246`- Calls the method `printTheseThings`, which requires a String and an integer
+  
+###Socket timeouts and hanging commands
+There is currently an issue where the the client may randomly be unable to communicate with the roboRIO. If this happens, it is advised that the user wait until either a connection timeout occurs or the client successfully receives data. In the case that either a timeout occurs or hanging commands become too frequent, the most reliable solution is to quit the client, then redeploy the code to the roboRIO and start again from step 1. 
+
 ## Contributing
 Please see [CONTRIBUTING](CONTRIBUTING.md) for more information.
 
