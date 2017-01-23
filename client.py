@@ -10,7 +10,7 @@ def connect():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print "Connecting to roboRIO..."
     sock.connect((HOST, PORT))
-    sock.settimeout(20)
+    sock.settimeout(30)
     return sock;
 
 while(True):
