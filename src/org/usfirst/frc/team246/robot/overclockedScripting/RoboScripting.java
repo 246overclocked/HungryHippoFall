@@ -56,12 +56,15 @@ public class RoboScripting implements Runnable {
 
 	@Override
 	public void run() {
+		
 		while(true) {
 			
 			if(!isConnected) {
 				isConnected = connect();
 				continue;
 			}
+			
+			System.out.println("is connected: " + isConnected);
 			
 			try (Socket clientSocket = socket.accept();
 				BufferedReader inFromClient = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -80,6 +83,7 @@ public class RoboScripting implements Runnable {
 					if(args == null) {
 						try {
 							socket.close();
+							System.out.println("socket closed");
 						} catch (IOException e) {
 							System.out.println("Error closing socket");
 							e.printStackTrace();
@@ -99,12 +103,41 @@ public class RoboScripting implements Runnable {
 			
 			} catch (IOException e) {}	
 		}
+		
+		/* UDP Version (Incomplete)
+		try {
+			DatagramSocket serverSocket = new DatagramSocket(8080);
+	         byte[] receiveData = new byte[1024];
+	         byte[] sendData = new byte[1024];
+	         while(true)
+	            {
+	               DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+	               serverSocket.receive(receivePacket);
+	               String msg = new String(receivePacket.getData());
+	               System.out.println("RECEIVED: " + msg);
+	               
+	               String[] args = parse(msg);
+	               System.out.println(Arrays.toString(args));
+	               String out = call(parse(msg));
+	               
+	               InetAddress IPAddress = receivePacket.getAddress();
+	               int port = receivePacket.getPort();
+	               sendData = out.getBytes();
+	               DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
+	               serverSocket.send(sendPacket);
+	               System.out.println("sent");
+	            }
+				
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		 */
 	}
 		
 	public String[] parse(String msg) {
 		if(msg == null) {
 			return null;
-		} else if(msg.equals("exit")) {
+		} else if(msg.equals("exit") || msg.equals("err_timeout")) {
 			return null;
 		} else {
 			String[] args = new String[msg.split(":").length];
