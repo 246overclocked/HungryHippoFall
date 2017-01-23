@@ -110,7 +110,7 @@ The RoboScripting library is a tool used to test and debug registered motors, me
   `methods:printTheseThings:overclocked:246`- Calls the method `printTheseThings`, which requires a String and an integer
   
 ###Socket timeouts and hanging commands
-There is currently an issue where the the client may randomly be unable to communicate with the roboRIO. If this happens, it is advised that the user wait until either a connection timeout occurs or the client successfully receives data. In the case that either a timeout occurs or hanging commands become too frequent, the most reliable solution is to quit the client, then redeploy the code to the roboRIO and start again from step 1. 
+There is an issue where the the client may randomly be unable to communicate with the roboRIO. The default timeout period is 30 seconds. If the client does not receive data within this period, it will attempt to reset the connection to the roboRIO. The roboRIO will be told to close the socket and open another one. The client end will then close its socket and attempt to reconnect to the newly opened socket on the roboRIO. If successful, the command prompt will display again. If unsuccessful, the client will exit with a socket.error (Timeout). It is recommended that the user redeploy code to the robot and start again in this scenario. It is also possible to continue attempting to reconnect multiple times, but this method may be slower. 
 
 ## Contributing
 Please see [CONTRIBUTING](CONTRIBUTING.md) for more information.
