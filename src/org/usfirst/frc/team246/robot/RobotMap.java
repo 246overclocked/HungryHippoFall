@@ -1,4 +1,7 @@
 package org.usfirst.frc.team246.robot;
+
+import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -7,7 +10,10 @@ package org.usfirst.frc.team246.robot;
  */
 public class RobotMap {
     
-	// Create constants and declare variables here
+	public static CANTalon246 testMotor1 = CANTalon246.init(2, 10);
+	public static CANTalon246 testMotor2 = CANTalon246.init(3, 10);
+	public static CANTalon246 testMotor3 = CANTalon246.init(4, 10);
+	
 	
 	public static void init() {
 		

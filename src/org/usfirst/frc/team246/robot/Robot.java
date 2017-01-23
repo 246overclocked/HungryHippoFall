@@ -1,12 +1,18 @@
 
 package org.usfirst.frc.team246.robot;
 
+import org.usfirst.frc.team246.robot.overclockedLibraries.CANTalon246;
+import org.usfirst.frc.team246.robot.overclockedLibraries.SampleCommand;
+import org.usfirst.frc.team246.robot.overclockedScripting.CallReference;
+import org.usfirst.frc.team246.robot.overclockedScripting.RoboScripting;
+import org.usfirst.frc.team246.robot.overclockedScripting.RoboScripting.MethodHolder;
+
+import com.ctre.CANTalon.TalonControlMode;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -17,6 +23,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 	public static OI oi;
+
 	
 	// Declare subsystem variables here
 
@@ -30,6 +37,47 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 
 		// Instantiate subsytem objects here
+		
+		CANTalon246 testMotor1 = RobotMap.testMotor1;
+		CANTalon246 testMotor2 = RobotMap.testMotor2;
+		CANTalon246 testMotor3 = RobotMap.testMotor3;
+		
+		testMotor1.changeControlMode(TalonControlMode.PercentVbus);
+		testMotor2.changeControlMode(TalonControlMode.PercentVbus);
+		testMotor3.changeControlMode(TalonControlMode.PercentVbus);
+		
+		RoboScripting.addMotor("testMotor1", testMotor1);
+		RoboScripting.addMotor("testMotor2", testMotor2);
+		RoboScripting.addMotor("testMotor3", testMotor3);
+		
+		RoboScripting.addMethod("stopAll", new MethodHolder() {
+			
+			@Override
+			public String requiredParams() {
+				return "None";
+			}
+			
+			@Override
+			public void callMethod(String[] args) throws ArrayIndexOutOfBoundsException, NumberFormatException {
+				stopAllMotors();
+			}
+		});
+		
+		Command testCommand = new SampleCommand(); 
+		
+		RoboScripting.addCommand("testCommand", testCommand);
+		
+		
+		
+		RoboScripting comms = new RoboScripting();
+		comms.initialize(8080);
+		
+    }
+    
+    private void stopAllMotors() {
+    	CallReference.motors.get("testMotor1").set(0);
+    	CallReference.motors.get("testMotor2").set(0);
+    	CallReference.motors.get("testMotor3").set(0);
     }
 	
 	/**
